@@ -1,0 +1,8 @@
+{
+	"name": "intercept-youtube-links",
+	"fullName": "Intercept YouTube Links",
+	"description": "Inserts a hop to all watch links on YouTube in order to disable auto-play. The link won't be inserted by a normal click, only middle-click/context menu/D'n'D.",
+	"author": "Mathias Panzenb\u00f6ck",
+	"version": "1.0",
+	"id": "jid1-vWY6LGqEdwjDAA"
+}

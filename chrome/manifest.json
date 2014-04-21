@@ -1,0 +1,12 @@
+{
+	"name": "Intercept YouTube Links",
+	"description": "Inserts a hop to all watch links on YouTube in order to disable auto-play. The link won't be inserted by a normal click, only middle-click/context menu/D'n'D.",
+	"version": "1.0",
+	"manifest_version": 2,
+	"content_scripts": [{
+		"matches": ["<all_urls>"],
+		"js": ["content.js"],
+		"run_at": "document_end",
+		"all_frames": false
+	}]
+}
