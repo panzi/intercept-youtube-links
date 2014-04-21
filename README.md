@@ -25,15 +25,14 @@ Installation
 ------------
 
 This add-on comes in three variants: A Chrome extension, a Firefox add-on and
-a user script. To install the Chrome extension you have to download the crx file
-and then drop it into the extensions setting window. To use the user script on
-Firefox you first need to install the [Grease Monkey][1] add-on. Chrome should
-be able to install user scripts without the need for any further add-on, but I
-guess you have to do the same download and drop into the extensions settings
-window dance.
+a user script. To install any of these extensions you first have to download
+them and then drop them into your browser. For the Chrome extension you need
+to drop the file into the extensions setting window. If you want to use the
+user script with Firefox you first have to install the [Grease Monkey][1]
+add-on.
 
  * [Chrome Extension v1.0](https://github.com/panzi/intercept-youtube-links/releases/download/v1.0/intercept-youtube-links.crx)
  * [Firefox Add-on v1.0](https://github.com/panzi/intercept-youtube-links/releases/download/v1.0/intercept-youtube-links.xpi)
  * [User Script v1.0](https://github.com/panzi/intercept-youtube-links/releases/download/v1.0/intercept-youtube-links.user.js)
 
-[1] https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/
+[1]: https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/
