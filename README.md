@@ -21,3 +21,19 @@ will still load so your normal YouTube browsing will not be disturbed (note: it
 will break YouTubes fancy dynamic page loading, which cause more troubles than
 good for me anyway, and revert to plain old page instead).
 
+Installation
+------------
+
+This add-on comes in three variants: A Chrome extension, a Firefox add-on and
+a user script. To install the Chrome extension you have to download the crx file
+and then drop it into the extensions setting window. To use the user script on
+Firefox you first need to install the [Grease Monkey][1] add-on. Chrome should
+be able to install user scripts without the need for any further add-on, but I
+guess you have to do the same download and drop into the extensions settings
+window dance.
+
+ * [Chrome Extension v1.0](https://github.com/panzi/intercept-youtube-links/releases/download/v1.0/intercept-youtube-links.crx)
+ * [Firefox Add-on v1.0](https://github.com/panzi/intercept-youtube-links/releases/download/v1.0/intercept-youtube-links.xpi)
+ * [User Script v1.0](https://github.com/panzi/intercept-youtube-links/releases/download/v1.0/intercept-youtube-links.user.js)
+
+[1] https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/
