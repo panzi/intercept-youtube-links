@@ -7,7 +7,7 @@ open many videos in tabs and then watch one tab after the other (or let it open
 in the browser session for some days before I close it again).
 
 Up until now I could force YouTube to use the flash plugin (by sending an old
-Safari user agent string) and then I used the click-to-play functionallity of
+Safari user agent string) and then I used the click-to-play functionality of
 Chrome/Firefox to stop flash from automatically playing. But this does not work
 anymore, and neither did all the "disable YouTube autoplay" add-ons/extensions.
 
