@@ -82,6 +82,8 @@ function insertHop (link) {
 		'<head>',
 		'<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>',
 		'<title>',escapeHtml(title),'</title>',
+		'<link rel="shortcut icon" href="https://s.ytimg.com/yts/img/favicon-vfldLzJxy.ico" type="image/x-icon"/>',
+		'<link rel="icon" href="https://s.ytimg.com/yts/img/favicon_32-vflWoMFGx.png" sizes="32x32"/>',
 		'<style type="text/css">html, body {margin:0;padding:0;}\n',
 		'.main {width:100%;height:100%;position:absolute;left:0;right:0;top:0;bottom:0;display:table;}\n',
 		'.title {display:block;margin-top:10px;font-size:26px;font-weight:bold;}\n',
