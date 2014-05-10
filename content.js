@@ -1,10 +1,14 @@
 var linkSelector;
 var linkRegex;
 var videoTitle;
+var isVideoLink;
 
 if (/^https?:\/\/(www\.)?youtube(-nocookie)?\.com\//i.test(location.href)) {
-	linkSelector = 'a[href^="/watch?"], a[href^="https://www.youtube.com/watch?"], a[href^="http://www.youtube.com/watch?"], '+
-		'a[href^="https://www.youtube-nocookie.com/watch?"], a[href^="http://www.youtube-nocookie.com/watch?"]';
+	linkSelector = 'a[href^="/watch?"]:not(.prev-playlist-list-item):not(.next-playlist-list-item), '+
+		'a[href^="https://www.youtube.com/watch?"]:not(.prev-playlist-list-item):not(.next-playlist-list-item), '+
+		'a[href^="http://www.youtube.com/watch?"]:not(.prev-playlist-list-item):not(.next-playlist-list-item), '+
+		'a[href^="https://www.youtube-nocookie.com/watch?"]:not(.prev-playlist-list-item):not(.next-playlist-list-item), '+
+		'a[href^="http://www.youtube-nocookie.com/watch?"]:not(.prev-playlist-list-item):not(.next-playlist-list-item)';
 	linkRegex = /^(https?:\/\/(www\.)?youtube(-nocookie)?\.com)?\/watch\?/i;
 	videoTitle = function (link) {
 		var title = link.title;
@@ -24,6 +28,11 @@ if (/^https?:\/\/(www\.)?youtube(-nocookie)?\.com\//i.test(location.href)) {
 		}
 		return title;
 	};
+	isVideoLink = function (elem) {
+		return elem.nodeType === 1 && elem.nodeName === "A" && linkRegex.test(elem.href) &&
+			!elem.classList.contains("prev-playlist-list-item") &&
+			!elem.classList.contains("next-playlist-list-item");
+	};
 }
 else {
 	linkSelector = 'a[href^="https://www.youtube.com/watch?"], a[href^="http://www.youtube.com/watch?"], '+
@@ -32,10 +41,9 @@ else {
 	videoTitle = function (link) {
 		return link.title||link.textContent||link.href;
 	};
-}
-
-function isVideoLink (elem) {
-	return elem.nodeType === 1 && elem.nodeName === "A" && linkRegex.test(elem.href);
+	isVideoLink = function (elem) {
+		return elem.nodeType === 1 && elem.nodeName === "A" && linkRegex.test(elem.href);
+	};
 }
 
 function insertHops (ctx) {
