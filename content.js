@@ -78,7 +78,8 @@ function insertHop (link) {
 	reader.onload = function () {
 		link.href = this.result;
 		link.addEventListener('click',function (event) {
-			if ('buttons' in event ? event.buttons & 1 : event.button === 0) {
+			if (('buttons' in event ? event.buttons & 1 : event.button === 0) &&
+				!event.metaKey && !event.ctrlKey && !event.altKey && !event.shiftKey) {
 				location.href = url;
 				event.preventDefault();
 				event.stopPropagation();
