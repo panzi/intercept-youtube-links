@@ -1,3 +1,5 @@
+if (!/^https?:\/\/(www\.)?google(\.[a-z][a-z])?\.[a-z]+\//i.test(location.href)) {
+
 var linkSelector;
 var linkRegex;
 var videoTitle;
@@ -36,8 +38,9 @@ if (/^https?:\/\/(www\.)?youtube(-nocookie)?\.com\//i.test(location.href)) {
 }
 else {
 	linkSelector = 'a[href^="https://www.youtube.com/watch?"], a[href^="http://www.youtube.com/watch?"], '+
+		'a[href^="https://youtu.be/watch?"], a[href^="http://youtu.be/watch?"], '+
 		'a[href^="https://www.youtube-nocookie.com/watch?"], a[href^="http://www.youtube-nocookie.com/watch?"]';
-	linkRegex = /^https?:\/\/(www\.)?youtube(-nocookie)?\.com\/watch\?/i;
+	linkRegex = /^https?:\/\/(www\.)?youtu(be(-nocookie)?\.com\/watch\?|\.be\/)/i;
 	videoTitle = function (link) {
 		return link.title||link.textContent||link.href;
 	};
@@ -147,3 +150,5 @@ var observer = new MutationObserver(function (mutations) {
 });
 
 observer.observe(document.body, {attributes: true, childList: true, subtree: true});
+
+}
